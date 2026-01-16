@@ -1,0 +1,597 @@
+# German translation for Cleaning Price Calculator
+# Copyright (C) 2025 Cleaning Price Calculator
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cleaning Price Calculator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://yourcompany.com/support\n"
+"POT-Creation-Date: 2025-01-16 12:00+0000\n"
+"PO-Revision-Date: 2025-01-16 12:00+0000\n"
+"Last-Translator: Your Name <your.email@example.com>\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Manual\n"
+
+msgid "Cleaning Price Calculator"
+msgstr "Reinigungspreisrechner"
+
+msgid "German"
+msgstr "Deutsch"
+
+msgid "English"
+msgstr "Englisch"
+
+msgid "Arabic"
+msgstr "Arabisch"
+
+msgid "Cleaning Calculator"
+msgstr "Reinigungsrechner"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Room Types"
+msgstr "Raumarten"
+
+msgid "Quotes"
+msgstr "Angebote"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "You do not have permission to access this page."
+msgstr "Sie haben keine Berechtigung, auf diese Seite zuzugreifen."
+
+msgid "Room name is required."
+msgstr "Raumname ist erforderlich."
+
+msgid "Price per square meter must be greater than 0."
+msgstr "Der Preis pro Quadratmeter muss größer als 0 sein."
+
+msgid "Room type updated successfully."
+msgstr "Raumart erfolgreich aktualisiert."
+
+msgid "Room type created successfully."
+msgstr "Raumart erfolgreich erstellt."
+
+msgid "Failed to save room type."
+msgstr "Fehler beim Speichern der Raumart."
+
+msgid "Room type deleted successfully."
+msgstr "Raumart erfolgreich gelöscht."
+
+msgid "Failed to delete room type."
+msgstr "Fehler beim Löschen der Raumart."
+
+msgid "Settings saved successfully."
+msgstr "Einstellungen erfolgreich gespeichert."
+
+msgid "Euro"
+msgstr "Euro"
+
+msgid "US Dollar"
+msgstr "US-Dollar"
+
+msgid "British Pound"
+msgstr "Britisches Pfund"
+
+msgid "Swiss Franc"
+msgstr "Schweizer Franken"
+
+msgid "UAE Dirham"
+msgstr "VAE-Dirham"
+
+msgid "Saudi Riyal"
+msgstr "Saudi-Riyal"
+
+msgid "Cleaning Price Calculator - Dashboard"
+msgstr "Reinigungspreisrechner - Dashboard"
+
+msgid "Total Quotes"
+msgstr "Angebote gesamt"
+
+msgid "Plugin Status"
+msgstr "Plugin-Status"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Recent Quote Requests"
+msgstr "Aktuelle Angebotsanfragen"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Customer"
+msgstr "Kunde"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Total Price"
+msgstr "Gesamtpreis"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "View"
+msgstr "Ansehen"
+
+msgid "View All Quotes"
+msgstr "Alle Angebote anzeigen"
+
+msgid "No quotes received yet."
+msgstr "Noch keine Angebote erhalten."
+
+msgid "Quick Actions"
+msgstr "Schnellaktionen"
+
+msgid "Manage Room Types"
+msgstr "Raumarten verwalten"
+
+msgid "Shortcode Usage"
+msgstr "Shortcode-Verwendung"
+
+msgid "Use this shortcode to display the calculator on any page or post:"
+msgstr "Verwenden Sie diesen Shortcode, um den Rechner auf einer beliebigen Seite oder einem Beitrag anzuzeigen:"
+
+msgid "Compatible with Elementor, Gutenberg, and Classic Editor"
+msgstr "Kompatibel mit Elementor, Gutenberg und dem klassischen Editor"
+
+msgid "Room Types Management"
+msgstr "Raumarten-Verwaltung"
+
+msgid "Edit Room Type"
+msgstr "Raumart bearbeiten"
+
+msgid "Add New Room Type"
+msgstr "Neue Raumart hinzufügen"
+
+msgid "Room Type Name"
+msgstr "Name der Raumart"
+
+msgid "e.g., Single Room, Kitchen, Bathroom"
+msgstr "z.B. Einzelzimmer, Küche, Badezimmer"
+
+msgid "Price per m²"
+msgstr "Preis pro m²"
+
+msgid "Base price per square meter"
+msgstr "Grundpreis pro Quadratmeter"
+
+msgid "Description"
+msgstr "Beschreibung"
+
+msgid "Optional description for this room type"
+msgstr "Optionale Beschreibung für diese Raumart"
+
+msgid "Sort Order"
+msgstr "Sortierreihenfolge"
+
+msgid "Lower numbers appear first"
+msgstr "Niedrigere Zahlen erscheinen zuerst"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Inactive"
+msgstr "Inaktiv"
+
+msgid "Update Room Type"
+msgstr "Raumart aktualisieren"
+
+msgid "Add Room Type"
+msgstr "Raumart hinzufügen"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Existing Room Types"
+msgstr "Vorhandene Raumarten"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Price/m²"
+msgstr "Preis/m²"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Are you sure you want to delete this room type?"
+msgstr "Möchten Sie diese Raumart wirklich löschen?"
+
+msgid "No room types found. Add your first room type using the form."
+msgstr "Keine Raumarten gefunden. Fügen Sie Ihre erste Raumart über das Formular hinzu."
+
+msgid "Quote Requests"
+msgstr "Angebotsanfragen"
+
+msgid "You have %s quote request."
+msgid_plural "You have %s quote requests."
+msgstr[0] "Sie haben %s Angebotsanfrage."
+msgstr[1] "Sie haben %s Angebotsanfragen."
+
+msgid "Customer Name"
+msgstr "Kundenname"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Show more details"
+msgstr "Weitere Details anzeigen"
+
+msgid "%s ago"
+msgstr "vor %s"
+
+msgid "View Details"
+msgstr "Details ansehen"
+
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s Element"
+msgstr[1] "%s Elemente"
+
+msgid "No Quote Requests Yet"
+msgstr "Noch keine Angebotsanfragen"
+
+msgid "Quote requests submitted through your calculator will appear here."
+msgstr "Über Ihren Rechner eingereichte Angebotsanfragen werden hier angezeigt."
+
+msgid "View Dashboard"
+msgstr "Dashboard anzeigen"
+
+msgid "Export Options"
+msgstr "Exportoptionen"
+
+msgid "Export functionality for bulk quotes will be available in a future update."
+msgstr "Die Exportfunktion für Massenangebote wird in einem zukünftigen Update verfügbar sein."
+
+msgid "Quote Details"
+msgstr "Angebotsdetails"
+
+msgid "Submitted on %s at %s"
+msgstr "Eingereicht am %s um %s"
+
+msgid "Export PDF"
+msgstr "PDF exportieren"
+
+msgid "Back to Quotes"
+msgstr "Zurück zu Angeboten"
+
+msgid "Customer Information"
+msgstr "Kundeninformationen"
+
+msgid "Full Name"
+msgstr "Vollständiger Name"
+
+msgid "Email Address"
+msgstr "E-Mail-Adresse"
+
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+msgid "Address"
+msgstr "Adresse"
+
+msgid "Customer Message"
+msgstr "Kundennachricht"
+
+msgid "Selected Rooms"
+msgstr "Ausgewählte Räume"
+
+msgid "#"
+msgstr "Nr."
+
+msgid "Room Type"
+msgstr "Raumart"
+
+msgid "Area (m²)"
+msgstr "Fläche (m²)"
+
+msgid "Price per m²"
+msgstr "Preis pro m²"
+
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+msgid "Total Price:"
+msgstr "Gesamtpreis:"
+
+msgid "No items found for this quote."
+msgstr "Keine Elemente für dieses Angebot gefunden."
+
+msgid "Technical Information"
+msgstr "Technische Informationen"
+
+msgid "Quote ID"
+msgstr "Angebots-ID"
+
+msgid "Submission Date"
+msgstr "Einreichungsdatum"
+
+msgid "IP Address"
+msgstr "IP-Adresse"
+
+msgid "Currency"
+msgstr "Währung"
+
+msgid "User Agent"
+msgstr "Benutzer-Agent"
+
+msgid "Re: Quote #%d"
+msgstr "Betr.: Angebot #%d"
+
+msgid "Send Email"
+msgstr "E-Mail senden"
+
+msgid "Call Customer"
+msgstr "Kunde anrufen"
+
+msgid "Download PDF"
+msgstr "PDF herunterladen"
+
+msgid "Print"
+msgstr "Drucken"
+
+msgid "Quote"
+msgstr "Angebot"
+
+msgid "Invalid quote ID"
+msgstr "Ungültige Angebots-ID"
+
+msgid "Quote not found"
+msgstr "Angebot nicht gefunden"
+
+msgid "Company Information"
+msgstr "Unternehmensinformationen"
+
+msgid "Email Configuration"
+msgstr "E-Mail-Konfiguration"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Design"
+msgstr "Design"
+
+msgid "Form Display"
+msgstr "Formularanzeige"
+
+msgid "Save All Settings"
+msgstr "Alle Einstellungen speichern"
+
+msgid "Company Name"
+msgstr "Firmenname"
+
+msgid "Your company name for emails and display"
+msgstr "Ihr Firmenname für E-Mails und Anzeige"
+
+msgid "Contact Phone"
+msgstr "Kontakttelefon"
+
+msgid "Phone number for the contact button"
+msgstr "Telefonnummer für die Kontaktschaltfläche"
+
+msgid "Admin Email"
+msgstr "Administrator-E-Mail"
+
+msgid "Email address to receive quote notifications"
+msgstr "E-Mail-Adresse für den Empfang von Angebotsbenachrichtigungen"
+
+msgid "SMTP Configuration"
+msgstr "SMTP-Konfiguration"
+
+msgid "Enable SMTP"
+msgstr "SMTP aktivieren"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "Enable SMTP for reliable email delivery"
+msgstr "SMTP für zuverlässige E-Mail-Zustellung aktivieren"
+
+msgid "SMTP Host"
+msgstr "SMTP-Host"
+
+msgid "SMTP Port"
+msgstr "SMTP-Port"
+
+msgid "Usually 587 for TLS or 465 for SSL"
+msgstr "Normalerweise 587 für TLS oder 465 für SSL"
+
+msgid "Encryption"
+msgstr "Verschlüsselung"
+
+msgid "SMTP Username"
+msgstr "SMTP-Benutzername"
+
+msgid "SMTP Password"
+msgstr "SMTP-Passwort"
+
+msgid "Language Settings"
+msgstr "Spracheinstellungen"
+
+msgid "Default Language"
+msgstr "Standardsprache"
+
+msgid "Design Customization"
+msgstr "Design-Anpassung"
+
+msgid "Primary Color"
+msgstr "Primärfarbe"
+
+msgid "Button Color"
+msgstr "Schaltflächenfarbe"
+
+msgid "Accent Color"
+msgstr "Akzentfarbe"
+
+msgid "Quote Form Display Mode"
+msgstr "Anzeigemodus für Angebotsformular"
+
+msgid "Display Mode"
+msgstr "Anzeigemodus"
+
+msgid "Popup Modal"
+msgstr "Popup-Modal"
+
+msgid "Inline Below Totals"
+msgstr "Inline unter Summen"
+
+msgid "Replace Calculator View"
+msgstr "Rechneransicht ersetzen"
+
+msgid "How the quote form should be displayed when user clicks \"Request a Quote\""
+msgstr "Wie das Angebotsformular angezeigt werden soll, wenn der Benutzer auf \"Angebot anfordern\" klickt"
+
+msgid "No room types available"
+msgstr "Keine Raumarten verfügbar"
+
+msgid "Name is required"
+msgstr "Name ist erforderlich"
+
+msgid "Valid email is required"
+msgstr "Gültige E-Mail ist erforderlich"
+
+msgid "Phone number is required"
+msgstr "Telefonnummer ist erforderlich"
+
+msgid "Please add at least one room"
+msgstr "Bitte fügen Sie mindestens einen Raum hinzu"
+
+msgid "No valid rooms provided"
+msgstr "Keine gültigen Räume angegeben"
+
+msgid "Quote submitted successfully! We will contact you soon."
+msgstr "Angebot erfolgreich übermittelt! Wir werden uns bald mit Ihnen in Verbindung setzen."
+
+msgid "Failed to save quote. Please try again."
+msgstr "Fehler beim Speichern des Angebots. Bitte versuchen Sie es erneut."
+
+msgid "New Quote Request - #{quote_id}"
+msgstr "Neue Angebotsanfrage - #{quote_id}"
+
+msgid "Quote Confirmation - #{quote_id}"
+msgstr "Angebotsbestätigung - #{quote_id}"
+
+msgid "New Quote Request"
+msgstr "Neue Angebotsanfrage"
+
+msgid "Quote Confirmation"
+msgstr "Angebotsbestätigung"
+
+msgid "Quote Details"
+msgstr "Angebotsdetails"
+
+msgid "Quote ID:"
+msgstr "Angebots-ID:"
+
+msgid "Customer Name:"
+msgstr "Kundenname:"
+
+msgid "Email:"
+msgstr "E-Mail:"
+
+msgid "Phone:"
+msgstr "Telefon:"
+
+msgid "Address:"
+msgstr "Adresse:"
+
+msgid "Message:"
+msgstr "Nachricht:"
+
+msgid "Dear %s,"
+msgstr "Sehr geehrte/r %s,"
+
+msgid "Thank you for your quote request. We have received your information and will contact you shortly."
+msgstr "Vielen Dank für Ihre Angebotsanfrage. Wir haben Ihre Informationen erhalten und werden uns in Kürze mit Ihnen in Verbindung setzen."
+
+msgid "All rights reserved."
+msgstr "Alle Rechte vorbehalten."
+
+msgid "Calculate your cleaning service price by adding rooms and specifying their area."
+msgstr "Berechnen Sie Ihren Reinigungspreis, indem Sie Räume hinzufügen und deren Fläche angeben."
+
+msgid "Your Rooms"
+msgstr "Ihre Räume"
+
+msgid "Add Room"
+msgstr "Raum hinzufügen"
+
+msgid "No rooms added yet. Click \"Add Room\" to get started."
+msgstr "Noch keine Räume hinzugefügt. Klicken Sie auf \"Raum hinzufügen\", um zu beginnen."
+
+msgid "Price Summary"
+msgstr "Preiszusammenfassung"
+
+msgid "Total:"
+msgstr "Gesamt:"
+
+msgid "Contact Us"
+msgstr "Kontaktieren Sie uns"
+
+msgid "Request a Quote"
+msgstr "Angebot anfordern"
+
+msgid "Room"
+msgstr "Raum"
+
+msgid "Subtotal:"
+msgstr "Zwischensumme:"
+
+msgid "Select Room Type"
+msgstr "Raumart auswählen"
+
+msgid "Area"
+msgstr "Fläche"
+
+msgid "Remove Room"
+msgstr "Raum entfernen"
+
+msgid "Fill in your details and we will contact you with a detailed quote."
+msgstr "Füllen Sie Ihre Daten aus und wir werden uns mit einem detaillierten Angebot bei Ihnen melden."
+
+msgid "Message"
+msgstr "Nachricht"
+
+msgid "Submit Quote Request"
+msgstr "Angebotsanfrage absenden"
+
+msgid "This field is required"
+msgstr "Dieses Feld ist erforderlich"
+
+msgid "Please enter a valid email address"
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+
+msgid "Submitting..."
+msgstr "Wird übermittelt..."
+
+msgid "Quote submitted successfully!"
+msgstr "Angebot erfolgreich übermittelt!"
+
+msgid "An error occurred. Please try again."
+msgstr "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+
+msgid "Are you sure you want to delete this item?"
+msgstr "Möchten Sie dieses Element wirklich löschen?"
+
+msgid "Saved successfully"
+msgstr "Erfolgreich gespeichert"
+
+msgid "An error occurred"
+msgstr "Ein Fehler ist aufgetreten"

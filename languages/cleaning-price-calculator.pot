@@ -1,0 +1,619 @@
+# Copyright (C) 2025 Cleaning Price Calculator
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cleaning Price Calculator 1.0.0\n"
+"Report-Msgid-Bugs-To: https://yourcompany.com/support\n"
+"POT-Creation-Date: 2025-01-16 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: cleaning-price-calculator.php
+msgid "Cleaning Price Calculator"
+msgstr ""
+
+#: includes/class-cpc-i18n.php
+msgid "German"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Arabic"
+msgstr ""
+
+#: admin/class-cpc-admin-menu.php
+msgid "Cleaning Calculator"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Room Types"
+msgstr ""
+
+msgid "Quotes"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+#: admin/class-cpc-room-types.php
+msgid "You do not have permission to access this page."
+msgstr ""
+
+msgid "Room name is required."
+msgstr ""
+
+msgid "Price per square meter must be greater than 0."
+msgstr ""
+
+msgid "Room type updated successfully."
+msgstr ""
+
+msgid "Room type created successfully."
+msgstr ""
+
+msgid "Failed to save room type."
+msgstr ""
+
+msgid "Room type deleted successfully."
+msgstr ""
+
+msgid "Failed to delete room type."
+msgstr ""
+
+#: admin/class-cpc-settings.php
+msgid "Settings saved successfully."
+msgstr ""
+
+msgid "Euro"
+msgstr ""
+
+msgid "US Dollar"
+msgstr ""
+
+msgid "British Pound"
+msgstr ""
+
+msgid "Swiss Franc"
+msgstr ""
+
+msgid "UAE Dirham"
+msgstr ""
+
+msgid "Saudi Riyal"
+msgstr ""
+
+#: admin/views/dashboard.php
+msgid "Cleaning Price Calculator - Dashboard"
+msgstr ""
+
+msgid "Total Quotes"
+msgstr ""
+
+msgid "Plugin Status"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Recent Quote Requests"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Customer"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Total Price"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View All Quotes"
+msgstr ""
+
+msgid "No quotes received yet."
+msgstr ""
+
+msgid "Quick Actions"
+msgstr ""
+
+msgid "Manage Room Types"
+msgstr ""
+
+msgid "Shortcode Usage"
+msgstr ""
+
+msgid "Use this shortcode to display the calculator on any page or post:"
+msgstr ""
+
+msgid "Compatible with Elementor, Gutenberg, and Classic Editor"
+msgstr ""
+
+#: admin/views/room-types.php
+msgid "Room Types Management"
+msgstr ""
+
+msgid "Edit Room Type"
+msgstr ""
+
+msgid "Add New Room Type"
+msgstr ""
+
+msgid "Room Type Name"
+msgstr ""
+
+msgid "e.g., Single Room, Kitchen, Bathroom"
+msgstr ""
+
+msgid "Price per m²"
+msgstr ""
+
+msgid "Base price per square meter"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Optional description for this room type"
+msgstr ""
+
+msgid "Sort Order"
+msgstr ""
+
+msgid "Lower numbers appear first"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Update Room Type"
+msgstr ""
+
+msgid "Add Room Type"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Existing Room Types"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Price/m²"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Are you sure you want to delete this room type?"
+msgstr ""
+
+msgid "No room types found. Add your first room type using the form."
+msgstr ""
+
+#: admin/views/quotes-list.php
+msgid "Quote Requests"
+msgstr ""
+
+msgid "You have %s quote request."
+msgid_plural "You have %s quote requests."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Customer Name"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Show more details"
+msgstr ""
+
+msgid "%s ago"
+msgstr ""
+
+msgid "View Details"
+msgstr ""
+
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "No Quote Requests Yet"
+msgstr ""
+
+msgid "Quote requests submitted through your calculator will appear here."
+msgstr ""
+
+msgid "View Dashboard"
+msgstr ""
+
+msgid "Export Options"
+msgstr ""
+
+msgid "Export functionality for bulk quotes will be available in a future update."
+msgstr ""
+
+#: admin/views/quote-detail.php
+msgid "Quote Details"
+msgstr ""
+
+msgid "Submitted on %s at %s"
+msgstr ""
+
+msgid "Export PDF"
+msgstr ""
+
+msgid "Back to Quotes"
+msgstr ""
+
+msgid "Customer Information"
+msgstr ""
+
+msgid "Full Name"
+msgstr ""
+
+msgid "Email Address"
+msgstr ""
+
+msgid "Phone Number"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Customer Message"
+msgstr ""
+
+msgid "Selected Rooms"
+msgstr ""
+
+msgid "#"
+msgstr ""
+
+msgid "Room Type"
+msgstr ""
+
+msgid "Area (m²)"
+msgstr ""
+
+msgid "Price per m²"
+msgstr ""
+
+msgid "Subtotal"
+msgstr ""
+
+msgid "Total Price:"
+msgstr ""
+
+msgid "No items found for this quote."
+msgstr ""
+
+msgid "Technical Information"
+msgstr ""
+
+msgid "Quote ID"
+msgstr ""
+
+msgid "Submission Date"
+msgstr ""
+
+msgid "IP Address"
+msgstr ""
+
+msgid "Currency"
+msgstr ""
+
+msgid "User Agent"
+msgstr ""
+
+msgid "Quick Actions"
+msgstr ""
+
+msgid "Re: Quote #%d"
+msgstr ""
+
+msgid "Send Email"
+msgstr ""
+
+msgid "Call Customer"
+msgstr ""
+
+msgid "Download PDF"
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Quote"
+msgstr ""
+
+msgid "Invalid quote ID"
+msgstr ""
+
+msgid "Quote not found"
+msgstr ""
+
+#: admin/views/settings.php
+msgid "Company Information"
+msgstr ""
+
+msgid "Email Configuration"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Design"
+msgstr ""
+
+msgid "Form Display"
+msgstr ""
+
+msgid "Save All Settings"
+msgstr ""
+
+msgid "Company Name"
+msgstr ""
+
+msgid "Your company name for emails and display"
+msgstr ""
+
+msgid "Contact Phone"
+msgstr ""
+
+msgid "Phone number for the contact button"
+msgstr ""
+
+msgid "Admin Email"
+msgstr ""
+
+msgid "Email address to receive quote notifications"
+msgstr ""
+
+msgid "SMTP Configuration"
+msgstr ""
+
+msgid "Enable SMTP"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "Enable SMTP for reliable email delivery"
+msgstr ""
+
+msgid "SMTP Host"
+msgstr ""
+
+msgid "SMTP Port"
+msgstr ""
+
+msgid "Usually 587 for TLS or 465 for SSL"
+msgstr ""
+
+msgid "Encryption"
+msgstr ""
+
+msgid "SMTP Username"
+msgstr ""
+
+msgid "SMTP Password"
+msgstr ""
+
+msgid "Language Settings"
+msgstr ""
+
+msgid "Default Language"
+msgstr ""
+
+msgid "Design Customization"
+msgstr ""
+
+msgid "Primary Color"
+msgstr ""
+
+msgid "Button Color"
+msgstr ""
+
+msgid "Accent Color"
+msgstr ""
+
+msgid "Quote Form Display Mode"
+msgstr ""
+
+msgid "Display Mode"
+msgstr ""
+
+msgid "Popup Modal"
+msgstr ""
+
+msgid "Inline Below Totals"
+msgstr ""
+
+msgid "Replace Calculator View"
+msgstr ""
+
+msgid "How the quote form should be displayed when user clicks \"Request a Quote\""
+msgstr ""
+
+#: public/class-cpc-ajax.php
+msgid "No room types available"
+msgstr ""
+
+msgid "Name is required"
+msgstr ""
+
+msgid "Valid email is required"
+msgstr ""
+
+msgid "Phone number is required"
+msgstr ""
+
+msgid "Please add at least one room"
+msgstr ""
+
+msgid "No valid rooms provided"
+msgstr ""
+
+msgid "Quote submitted successfully! We will contact you soon."
+msgstr ""
+
+msgid "Failed to save quote. Please try again."
+msgstr ""
+
+msgid "New Quote Request - #{quote_id}"
+msgstr ""
+
+msgid "Quote Confirmation - #{quote_id}"
+msgstr ""
+
+msgid "New Quote Request"
+msgstr ""
+
+msgid "Quote Confirmation"
+msgstr ""
+
+msgid "Quote Details"
+msgstr ""
+
+msgid "Quote ID:"
+msgstr ""
+
+msgid "Customer Name:"
+msgstr ""
+
+msgid "Email:"
+msgstr ""
+
+msgid "Phone:"
+msgstr ""
+
+msgid "Address:"
+msgstr ""
+
+msgid "Message:"
+msgstr ""
+
+msgid "Dear %s,"
+msgstr ""
+
+msgid "Thank you for your quote request. We have received your information and will contact you shortly."
+msgstr ""
+
+msgid "All rights reserved."
+msgstr ""
+
+#: public/views/calculator.php
+msgid "Cleaning Price Calculator"
+msgstr ""
+
+msgid "Calculate your cleaning service price by adding rooms and specifying their area."
+msgstr ""
+
+msgid "Your Rooms"
+msgstr ""
+
+msgid "Add Room"
+msgstr ""
+
+msgid "No rooms added yet. Click \"Add Room\" to get started."
+msgstr ""
+
+msgid "Price Summary"
+msgstr ""
+
+msgid "Total:"
+msgstr ""
+
+msgid "Contact Us"
+msgstr ""
+
+msgid "Request a Quote"
+msgstr ""
+
+msgid "Room"
+msgstr ""
+
+msgid "Subtotal:"
+msgstr ""
+
+msgid "Select Room Type"
+msgstr ""
+
+msgid "Area"
+msgstr ""
+
+msgid "Remove Room"
+msgstr ""
+
+#: public/views/quote-form.php
+msgid "Request a Quote"
+msgstr ""
+
+msgid "Fill in your details and we will contact you with a detailed quote."
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Submit Quote Request"
+msgstr ""
+
+#: assets/js/frontend.js (JavaScript strings)
+msgid "This field is required"
+msgstr ""
+
+msgid "Please enter a valid email address"
+msgstr ""
+
+msgid "Submitting..."
+msgstr ""
+
+msgid "Quote submitted successfully!"
+msgstr ""
+
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: assets/js/admin.js (JavaScript strings)
+msgid "Are you sure you want to delete this item?"
+msgstr ""
+
+msgid "Saved successfully"
+msgstr ""
+
+msgid "An error occurred"
+msgstr ""
