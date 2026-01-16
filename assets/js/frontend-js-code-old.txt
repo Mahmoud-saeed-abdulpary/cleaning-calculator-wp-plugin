@@ -341,12 +341,9 @@
         }
 
         // Disable submit button and show loader
-        submitBtn.prop('disabled', true).addClass('cpc-btn-loading');
+        submitBtn.prop('disabled', true);
         btnText.hide();
         btnLoader.show();
-        
-        // Add visual feedback to the entire form
-        $('#cpc-quote-form-element').addClass('cpc-form-submitting');
 
         console.log('Sending AJAX request...');
         console.log('AJAX URL:', cpcFrontend.ajaxurl);
@@ -365,21 +362,17 @@
                 message: formData.message,
                 rooms: JSON.stringify(validRooms)
             },
-            beforeSend: function() {
-                // Show sending indicator
-                showFormNotice('info', cpcFrontend.strings.sending || 'Sending your quote request...');
-            },
             success: function(response) {
                 console.log('Quote submission response:', response);
                 if (response.success) {
                     showFormNotice('success', response.data.message || cpcFrontend.strings.success);
                     $('#cpc-quote-form-element')[0].reset();
                     
-                    // Reset calculator after showing success message
+                    // Reset calculator
                     setTimeout(function() {
                         hideQuoteForm();
                         resetCalculator();
-                    }, 3000);
+                    }, 2000);
                 } else {
                     console.error('Quote submission failed:', response);
                     showFormNotice('error', response.data.message || cpcFrontend.strings.error);
@@ -391,11 +384,9 @@
                 showFormNotice('error', cpcFrontend.strings.error || 'An error occurred. Please try again.');
             },
             complete: function() {
-                // Re-enable submit button and hide loader
-                submitBtn.prop('disabled', false).removeClass('cpc-btn-loading');
+                submitBtn.prop('disabled', false);
                 btnText.show();
                 btnLoader.hide();
-                $('#cpc-quote-form-element').removeClass('cpc-form-submitting');
             }
         });
     }

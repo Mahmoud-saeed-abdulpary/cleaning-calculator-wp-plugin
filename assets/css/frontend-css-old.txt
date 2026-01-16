@@ -1,0 +1,576 @@
+/* Cleaning Price Calculator - Frontend Styles */
+
+.cpc-calculator {
+    --cpc-primary: #2563eb;
+    --cpc-button: #10b981;
+    --cpc-accent: #f59e0b;
+    --cpc-border: #e5e7eb;
+    --cpc-text: #1f2937;
+    --cpc-text-light: #6b7280;
+    --cpc-bg: #ffffff;
+    --cpc-bg-light: #f9fafb;
+    --cpc-danger: #ef4444;
+    
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--cpc-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.cpc-calculator-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--cpc-border);
+}
+
+.cpc-calculator-header h2 {
+    margin: 0 0 10px 0;
+    color: var(--cpc-text);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cpc-calculator-description {
+    margin: 0;
+    color: var(--cpc-text-light);
+    font-size: 16px;
+}
+
+/* Rooms Section */
+.cpc-rooms-section {
+    margin-bottom: 30px;
+}
+
+.cpc-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cpc-section-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--cpc-text);
+}
+
+/* Accordion */
+.cpc-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cpc-accordion-item {
+    border: 1px solid var(--cpc-border);
+    border-radius: 8px;
+    background: var(--cpc-bg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.cpc-accordion-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cpc-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: var(--cpc-bg-light);
+    cursor: pointer;
+    user-select: none;
+}
+
+.cpc-room-title {
+    font-weight: 600;
+    color: var(--cpc-text);
+    flex: 1;
+}
+
+.cpc-room-subtotal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+}
+
+.cpc-subtotal-label {
+    color: var(--cpc-text-light);
+    font-size: 14px;
+}
+
+.cpc-subtotal-amount {
+    font-weight: 700;
+    color: var(--cpc-primary);
+    font-size: 16px;
+}
+
+.cpc-accordion-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.cpc-accordion-item.active .cpc-accordion-toggle {
+    transform: rotate(180deg);
+}
+
+.cpc-accordion-content {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid var(--cpc-border);
+}
+
+.cpc-accordion-item.active .cpc-accordion-content {
+    display: block;
+}
+
+/* Form Elements */
+.cpc-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.cpc-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.cpc-form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--cpc-text);
+    font-size: 14px;
+}
+
+.cpc-form-group select,
+.cpc-form-group input,
+.cpc-form-control {
+    padding: 12px 15px;
+    border: 1px solid var(--cpc-border);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.cpc-form-group select:focus,
+.cpc-form-group input:focus,
+.cpc-form-control:focus {
+    outline: none;
+    border-color: var(--cpc-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.cpc-form-control {
+    width: 100%;
+}
+
+textarea.cpc-form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+.cpc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.cpc-btn-primary {
+    background: var(--cpc-button);
+    color: white;
+}
+
+.cpc-btn-primary:hover {
+    background: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cpc-btn-secondary {
+    background: var(--cpc-primary);
+    color: white;
+}
+
+.cpc-btn-secondary:hover {
+    background: #1d4ed8;
+}
+
+.cpc-btn-outline {
+    background: transparent;
+    border: 2px solid var(--cpc-primary);
+    color: var(--cpc-primary);
+}
+
+.cpc-btn-outline:hover {
+    background: var(--cpc-primary);
+    color: white;
+}
+
+.cpc-btn-danger {
+    background: var(--cpc-danger);
+    color: white;
+}
+
+.cpc-btn-danger:hover {
+    background: #dc2626;
+}
+
+.cpc-btn-small {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.cpc-btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+.cpc-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cpc-room-actions {
+    margin-top: 15px;
+}
+
+/* No Rooms Message */
+.cpc-no-rooms {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--cpc-text-light);
+    background: var(--cpc-bg-light);
+    border-radius: 8px;
+}
+
+/* Totals Section */
+.cpc-totals-section {
+    background: var(--cpc-bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.cpc-totals-section h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: var(--cpc-text);
+}
+
+.cpc-totals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.cpc-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--cpc-border);
+    color: var(--cpc-text);
+}
+
+.cpc-grand-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 2px solid var(--cpc-primary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cpc-text);
+}
+
+.cpc-total-amount {
+    color: var(--cpc-primary);
+    font-size: 24px;
+}
+
+/* Actions Section */
+.cpc-actions-section {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Quote Form */
+.cpc-quote-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cpc-quote-form h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: var(--cpc-text);
+}
+
+.cpc-form-description {
+    margin: 0 0 25px 0;
+    color: var(--cpc-text-light);
+}
+
+.cpc-quote-form .cpc-form-group {
+    margin-bottom: 20px;
+}
+
+.cpc-form-actions {
+    margin-top: 25px;
+}
+
+/* Form Notices */
+.cpc-form-notice {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.cpc-notice-success {
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+    color: #065f46;
+}
+
+.cpc-notice-error {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+}
+
+/* Prevent body scroll when modal is open */
+body.cpc-modal-active {
+    overflow: hidden !important;
+    position: fixed;
+    width: 100%;
+}
+
+/* Modal */
+.cpc-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cpc-modal.cpc-modal-open {
+    display: block;
+    opacity: 1;
+}
+
+.cpc-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999998;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block-start:20px ;
+}
+
+.cpc-modal-wrapper {
+    /* position: fixed; */
+    /* top: 0;
+    left: 0;  */ 
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+    pointer-events: none;
+    /* align-items: flex-start; */
+}
+
+.cpc-modal-content {
+    
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+    pointer-events: all;
+    margin: auto;
+    animation: cpc-modal-slide-in 0.3s ease-out;
+}
+
+/* Custom scrollbar for modal */
+.cpc-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cpc-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.cpc-modal-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.cpc-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+@keyframes cpc-modal-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cpc-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f3f4f6;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--cpc-text-light);
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.cpc-modal-close:hover {
+    background: #e5e7eb;
+    color: var(--cpc-text);
+}
+
+.cpc-modal-close .dashicons {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cpc-calculator {
+        padding: 20px;
+    }
+    
+    .cpc-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .cpc-actions-section {
+        flex-direction: column;
+    }
+    
+    .cpc-section-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .cpc-accordion-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .cpc-room-subtotal {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .cpc-modal-wrapper {
+        padding: 10px;
+        align-items: flex-start;
+    }
+    
+    .cpc-modal-content {
+        padding: 25px 20px;
+        max-height: calc(100vh - 20px);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: calc(100% - 20px);
+    }
+    
+    .cpc-modal-close {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .cpc-quote-form h3 {
+        font-size: 20px;
+        padding-right: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cpc-calculator-header h2 {
+        font-size: 22px;
+    }
+    
+    .cpc-modal-content {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+    
+    .cpc-quote-form h3 {
+        font-size: 18px;
+    }
+    
+    .cpc-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* RTL Support */
+.rtl .cpc-accordion-toggle {
+    transform: scaleX(-1);
+}
+
+.rtl .cpc-accordion-item.active .cpc-accordion-toggle {
+    transform: scaleX(-1) rotate(180deg);
+}

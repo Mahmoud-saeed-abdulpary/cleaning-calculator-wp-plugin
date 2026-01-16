@@ -12,13 +12,20 @@ class CPC_Ajax {
      * Get room types via AJAX
      */
     public function get_room_types() {
-        check_ajax_referer('cpc_frontend_nonce', 'nonce');
+        // Verify nonce
+        if (!check_ajax_referer('cpc_frontend_nonce', 'nonce', false)) {
+            error_log('CPC: Nonce verification failed for get_room_types');
+            wp_send_json_error('Security check failed');
+            return;
+        }
         
         $room_types = CPC_Database::get_room_types('active');
         
         if ($room_types) {
+            error_log('CPC: Returning ' . count($room_types) . ' room types');
             wp_send_json_success($room_types);
         } else {
+            error_log('CPC: No room types found');
             wp_send_json_error(__('No room types available', 'cleaning-price-calculator'));
         }
     }
@@ -27,19 +34,42 @@ class CPC_Ajax {
      * Submit quote via AJAX
      */
     public function submit_quote() {
-        check_ajax_referer('cpc_frontend_nonce', 'nonce');
+        error_log('CPC: Quote submission started');
+        error_log('CPC: POST data: ' . print_r($_POST, true));
+        
+        // Verify nonce
+        if (!check_ajax_referer('cpc_frontend_nonce', 'nonce', false)) {
+            error_log('CPC: Nonce verification failed for submit_quote');
+            wp_send_json_error(array('message' => 'Security check failed'));
+            return;
+        }
+        
+        error_log('CPC: Nonce verified successfully');
         
         // Validate customer data
         $customer_data = array(
-            'name' => sanitize_text_field($_POST['name'] ?? ''),
-            'email' => sanitize_email($_POST['email'] ?? ''),
-            'phone' => sanitize_text_field($_POST['phone'] ?? ''),
-            'address' => sanitize_textarea_field($_POST['address'] ?? ''),
-            'message' => sanitize_textarea_field($_POST['message'] ?? ''),
+            'name' => isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '',
+            'email' => isset($_POST['email']) ? sanitize_email($_POST['email']) : '',
+            'phone' => isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '',
+            'address' => isset($_POST['address']) ? sanitize_textarea_field($_POST['address']) : '',
+            'message' => isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '',
         );
         
+        error_log('CPC: Customer data: ' . print_r($customer_data, true));
+        
         // Validate rooms data
-        $rooms_data = isset($_POST['rooms']) ? json_decode(stripslashes($_POST['rooms']), true) : array();
+        $rooms_json = isset($_POST['rooms']) ? stripslashes($_POST['rooms']) : '[]';
+        error_log('CPC: Rooms JSON: ' . $rooms_json);
+        
+        $rooms_data = json_decode($rooms_json, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log('CPC: JSON decode error: ' . json_last_error_msg());
+            wp_send_json_error(array('message' => 'Invalid room data format'));
+            return;
+        }
+        
+        error_log('CPC: Decoded rooms data: ' . print_r($rooms_data, true));
         
         // Validation
         $errors = array();
@@ -56,11 +86,12 @@ class CPC_Ajax {
             $errors[] = __('Phone number is required', 'cleaning-price-calculator');
         }
         
-        if (empty($rooms_data)) {
+        if (empty($rooms_data) || !is_array($rooms_data)) {
             $errors[] = __('Please add at least one room', 'cleaning-price-calculator');
         }
         
         if (!empty($errors)) {
+            error_log('CPC: Validation errors: ' . print_r($errors, true));
             wp_send_json_error(array('message' => implode(', ', $errors)));
             return;
         }
@@ -68,13 +99,25 @@ class CPC_Ajax {
         // Validate and prepare rooms data
         $validated_rooms = array();
         foreach ($rooms_data as $room) {
-            $room_type = CPC_Database::get_room_type(intval($room['room_type_id']));
-            
-            if (!$room_type) {
+            if (!isset($room['room_type_id']) || empty($room['room_type_id'])) {
+                error_log('CPC: Skipping room with no room_type_id');
                 continue;
             }
             
-            $area = floatval($room['area']);
+            $room_type = CPC_Database::get_room_type(intval($room['room_type_id']));
+            
+            if (!$room_type) {
+                error_log('CPC: Room type not found: ' . $room['room_type_id']);
+                continue;
+            }
+            
+            $area = isset($room['area']) ? floatval($room['area']) : 0;
+            
+            if ($area <= 0) {
+                error_log('CPC: Skipping room with invalid area: ' . $area);
+                continue;
+            }
+            
             $subtotal = $area * floatval($room_type->price_per_sqm);
             
             $validated_rooms[] = array(
@@ -86,23 +129,39 @@ class CPC_Ajax {
             );
         }
         
+        error_log('CPC: Validated rooms: ' . print_r($validated_rooms, true));
+        
         if (empty($validated_rooms)) {
+            error_log('CPC: No valid rooms after validation');
             wp_send_json_error(array('message' => __('No valid rooms provided', 'cleaning-price-calculator')));
             return;
         }
         
         // Save quote
-        $quote_id = CPC_Database::save_quote($customer_data, $validated_rooms);
-        
-        if ($quote_id) {
-            // Send emails
-            $this->send_quote_emails($quote_id, $customer_data, $validated_rooms);
+        try {
+            $quote_id = CPC_Database::save_quote($customer_data, $validated_rooms);
+            error_log('CPC: Quote saved with ID: ' . $quote_id);
             
-            wp_send_json_success(array(
-                'message' => __('Quote submitted successfully! We will contact you soon.', 'cleaning-price-calculator'),
-                'quote_id' => $quote_id,
-            ));
-        } else {
+            if ($quote_id) {
+                // Send emails
+                try {
+                    $this->send_quote_emails($quote_id, $customer_data, $validated_rooms);
+                    error_log('CPC: Emails sent successfully');
+                } catch (Exception $e) {
+                    error_log('CPC: Error sending emails: ' . $e->getMessage());
+                    // Continue even if emails fail
+                }
+                
+                wp_send_json_success(array(
+                    'message' => __('Quote submitted successfully! We will contact you soon.', 'cleaning-price-calculator'),
+                    'quote_id' => $quote_id,
+                ));
+            } else {
+                error_log('CPC: Failed to save quote - no ID returned');
+                wp_send_json_error(array('message' => __('Failed to save quote. Please try again.', 'cleaning-price-calculator')));
+            }
+        } catch (Exception $e) {
+            error_log('CPC: Exception saving quote: ' . $e->getMessage());
             wp_send_json_error(array('message' => __('Failed to save quote. Please try again.', 'cleaning-price-calculator')));
         }
     }
@@ -114,6 +173,8 @@ class CPC_Ajax {
         $company_name = get_option('cpc_company_name', get_bloginfo('name'));
         $admin_email = get_option('cpc_admin_email', get_option('admin_email'));
         $currency = get_option('cpc_currency', 'EUR');
+        
+        error_log('CPC: Preparing to send emails to: ' . $admin_email);
         
         // Calculate total
         $total = 0;
@@ -149,13 +210,15 @@ class CPC_Ajax {
         $admin_subject = str_replace('{quote_id}', $quote_id, get_option('cpc_admin_email_subject', __('New Quote Request - #{quote_id}', 'cleaning-price-calculator')));
         $admin_message = $this->get_email_template('admin', $customer_data, $rooms_html, $quote_id);
         
-        wp_mail($admin_email, $admin_subject, $admin_message, array('Content-Type: text/html; charset=UTF-8'));
+        $admin_result = wp_mail($admin_email, $admin_subject, $admin_message, array('Content-Type: text/html; charset=UTF-8'));
+        error_log('CPC: Admin email sent: ' . ($admin_result ? 'success' : 'failed'));
         
         // Send to customer
         $customer_subject = str_replace('{quote_id}', $quote_id, get_option('cpc_customer_email_subject', __('Quote Confirmation - #{quote_id}', 'cleaning-price-calculator')));
         $customer_message = $this->get_email_template('customer', $customer_data, $rooms_html, $quote_id);
         
-        wp_mail($customer_data['email'], $customer_subject, $customer_message, array('Content-Type: text/html; charset=UTF-8'));
+        $customer_result = wp_mail($customer_data['email'], $customer_subject, $customer_message, array('Content-Type: text/html; charset=UTF-8'));
+        error_log('CPC: Customer email sent: ' . ($customer_result ? 'success' : 'failed'));
     }
     
     /**
